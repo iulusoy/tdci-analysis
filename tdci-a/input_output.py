@@ -140,9 +140,8 @@ class output_data:
         and saved to the corresponding files."""
         print('Writing L2 norm of transition dipole moments - ')
         np.savetxt('{}/l2norm.dat'.format(self.outdir),
-                   np.column_stack((self.data[0],
-                   self.data[1], self.data[2])), newline='\n',
-                   header='x   y   z')
+                   np.column_stack((self.data[0], self.data[1], self.data[2])),
+                   newline='\n', header='x   y   z')
         print('Plotting L2 norm')
         fig, ax = plt.subplots(figsize=(8, 5))
         x = range(0, len(self.data))
