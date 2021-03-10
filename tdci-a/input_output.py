@@ -103,7 +103,6 @@ class output_data:
         myplot.legend(loc='upper right', shadow=False,
                       fontsize=myfont - 4, borderpad=0.1,
                       labelspacing=0, handlelength=1)
-        return
 
     def plot0(self):
         """Expectation value output method.
@@ -119,7 +118,6 @@ class output_data:
             plt.savefig('{}/Figure_expec_{}.pdf'.format(self.outdir,
                         self.index[i]),
                         dpi=300, bbox_inches='tight')
-        return
 
     def plot1(self):
         """MO populations output method.
@@ -132,7 +130,6 @@ class output_data:
         print('Writing correlation matrix')
         self.data2.to_csv('{}/corrmat.dat'.format(self.outdir), header=True,
                           sep=' ')
-        return
 
     def plot2(self):
         """Transition dipole moment output method.
@@ -150,7 +147,6 @@ class output_data:
         self.plotparams(ax, "vector component", "L2 norm")
         plt.savefig('{}/Figure_l2norm.pdf'.format(self.outdir),
                     dpi=300, bbox_inches='tight')
-        return
 
     def plot3(self):
         """Electric field output method.
@@ -170,7 +166,6 @@ class output_data:
             plt.savefig('{}/Figure_efield_FT_{}.pdf'.
                         format(self.outdir, labels[self.index[0][i]]),
                         dpi=300, bbox_inches='tight')
-        return
 
     def plot4(self):
         """Autocorrelation function output method.
@@ -204,15 +199,12 @@ class output_data:
         self.plotparams(ax, "energy (au)", "Fourier transform")
         plt.savefig('{}/Figure_autocorrelation_function_FT.pdf'.format(
             self.outdir), dpi=300, bbox_inches='tight')
-        return
 
     def plot5(self):
         """Default output method - no output."""
         print('Error: Method not found')
         print('Select from the following:', self.objects)
         exit()
-        return
-
 
 # input_data('expec.t', 'data/')
 # input_data('efield.t', 'data/')

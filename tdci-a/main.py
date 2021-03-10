@@ -43,7 +43,6 @@ def run_expec(data, threshd, dir_out):
     # cProfile.runctx('sl.check_significance(data, threshd)', globals(),
     #                  locals())
     io.output_data(data, indices, dir_out, option='expecval')
-    return
 
 
 def run_npop(data, threshd, dir_out):
@@ -61,7 +60,6 @@ def run_npop(data, threshd, dir_out):
     corrmat = sl.correlation_matrix(data)
     io.output_data(data, indices, dir_out,
                    option='MOpop', data2=corrmat)
-    return
 
 
 def run_table(data, threshd, dir_out):
@@ -81,7 +79,6 @@ def run_table(data, threshd, dir_out):
     l2norm = sl.euclidean_distance([0, 2, 4], [1, 3, 5], data)
     indices = []
     io.output_data(l2norm, indices, dir_out, option='transdipmom')
-    return
 
 
 def run_efield(data, threshd, dir_out):
@@ -99,7 +96,6 @@ def run_efield(data, threshd, dir_out):
     data_w, data_s = nl.DFT(data, realdft=True)
     io.output_data(np.stack((data_w, data_s)), indices, dir_out,
                    option='efield')
-    return
 
 
 def run_nstate(data, threshd, dir_out):
@@ -118,12 +114,10 @@ def run_nstate(data, threshd, dir_out):
     indices = []
     io.output_data(np.stack((time, aucofu)), indices,
                    dir_out, option='aucofu', data2=np.stack((data_w, data_s)))
-    return
 
 
 def run_abort(data, threshd):
     exit("Error: This type of analysis is not implemented")
-    return
 
 
 def main(data_in, dir_in, dir_out, threshd=1.E-5):
@@ -139,7 +133,6 @@ def main(data_in, dir_in, dir_out, threshd=1.E-5):
     data = myobjin.read_in()
     runtype = get_run_type(data_in)
     runtype(data, threshd, dir_out)
-    return
 
 
 if __name__ == "__main__":
