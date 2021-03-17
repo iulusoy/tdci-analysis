@@ -37,6 +37,7 @@ jobs:
       run: flake8
     - name: Run pytest
       run: |
+        cd src/tdcia
         python -m pytest
     - name: Build sphinx documentation
       run: |
