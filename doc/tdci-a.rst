@@ -1,7 +1,7 @@
-tdcia.input\_output module
+input\_output module
 --------------------------
 
-.. automodule:: tdcia.input_output
+.. automodule:: input_output
    :members:
    :undoc-members:
    :show-inheritance:
@@ -9,7 +9,7 @@ tdcia.input\_output module
 main module
 -----------
 
-.. automodule:: tdcia.main
+.. automodule:: main
    :members:
    :undoc-members:
    :show-inheritance:
@@ -17,7 +17,7 @@ main module
 numerical module
 -----------------
 
-.. automodule:: tdcia.numerical
+.. automodule:: numerical
    :members:
    :undoc-members:
    :show-inheritance:
@@ -25,7 +25,7 @@ numerical module
 statistical module
 ----------------------
 
-.. automodule:: tdcia.statistical
+.. automodule:: statistical
    :members:
    :undoc-members:
    :show-inheritance:
