@@ -1,4 +1,26 @@
 # Data analysis package - I. S. Ulusoy, January 2021
+## Installation instructions
+You can install the package using   
+`pip install -i https://test.pypi.org/simple/ tdcianalyis`
+
+## Requirements
+The package requires 
+```
+numpy
+pandas
+seaborn
+```
+to run. Developers will also need the 
+```
+pytest
+sphinx
+recommonmark
+```
+packages for testing and building the documentation.
+
+## Documentation
+The documentation can be found [here](https://tdci-analysis.readthedocs.io/en/latest/).
+
 ## Features of the package
 
 The data analysis package allows you to process tdci output data and analyse the results from your run. The main features are:
