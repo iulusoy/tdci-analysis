@@ -25,7 +25,6 @@ def check_significance(data, threshd):
         data = data[indices]
     else:
         indices = data.var()[data.var() > threshd].index.values
-        # indices = [data.columns.get_loc(i) for i in indices]
         data = data.drop(data.var()[data.var() < threshd].index.values, axis=1)
     return data, indices
 

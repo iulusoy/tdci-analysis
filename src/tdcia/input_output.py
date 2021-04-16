@@ -205,10 +205,3 @@ class output_data:
         print('Error: Method not found')
         print('Select from the following:', self.objects)
         exit()
-
-# input_data('expec.t', 'data/')
-# input_data('efield.t', 'data/')
-# myobjin = input_data('nstate_i.t', 'data/')
-# wavef = myobjin.read_in()
-# time, aucofu = fl.aucofu(wavef)
-# myobjout = output_data(np.vstack((time, aucofu)), option='aucofu')
